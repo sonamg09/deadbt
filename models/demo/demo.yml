@@ -27,6 +27,10 @@ models:
     description: "final Orders DBT model"
   - name: session
     description: "Session DBT model"
+  - name: concat_address
+    description: "Concat Address DBT model"
+  - name: concat_name
+    description: "Concat Name DBT model"
     
 
 sources:
