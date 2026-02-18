@@ -23,8 +23,6 @@ models:
     description: "Purchase DBT model"
   - name: clean_orders
     description: "Clean orders DBT model"
-  - name: final_orders
-    description: "final Orders DBT model"
   - name: session
     description: "Session DBT model"
   - name: concat_address
