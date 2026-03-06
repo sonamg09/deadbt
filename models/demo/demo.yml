@@ -1,0 +1,74 @@
+version: 3
+
+models:
+  - name: employee
+    description: "Employee DBT model"
+    columns:
+      - name: emp_id
+        tests:
+          - unique
+          - not_null
+      - name: emp_salary
+        tests:
+          - value_check
+  - name: customer
+    description: "Customer DBT model"
+  - name: customer_view
+    description: "Customer view model"
+  - name: sales
+    description: "Sales DBT model"
+  - name: product
+    description: "Product DBT model"
+  - name: purchase
+    description: "Purchase DBT model"
+  - name: clean_orders
+    description: "Clean orders DBT model"
+  - name: session
+    description: "Session DBT model"
+  - name: concat_address
+    description: "Concat Address DBT model"
+  - name: concat_name
+    description: "Concat Name DBT model"
+    
+
+sources:
+  - name: employee
+    database: DBT_DB
+    schema: PUBLIC
+    tables:
+      - name: EMPLOYEE_RAW
+  - name: customer
+    database: DBT_DB
+    schema: PUBLIC
+    tables:
+      - name: CUSTOMER_SRC
+  - name: sales
+    database: DBT_DB
+    schema: PUBLIC
+    tables:
+      - name: SALES_SRC
+  - name: product
+    database: DBT_DB
+    schema: PUBLIC
+    tables:
+      - name: PRODUCT_SRC
+  - name: purchase
+    database: DBT_DB
+    schema: PUBLIC
+    tables:
+      - name: PURCHASE_SRC
+  - name: orders
+    database: DBT_DB
+    schema: PUBLIC
+    tables:
+      - name: BASE_ORDERS
+  - name: patient
+    database: DBT_DB
+    schema: PUBLIC
+    tables:
+      - name: PATIENT_SRC
+  - name: session
+    database: DBT_DB
+    schema: PUBLIC
+    tables:
+      - name: SESSION_SRC
